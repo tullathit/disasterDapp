@@ -36,6 +36,7 @@ contract RegisterDisaster {
     }
 
     // ฟังก์ชันสำหรับขอข้อมูลผู้เข้าร่วมที่มี idCard ที่กำหนด
+    // ใช้ idToIndex เพื่อหาดัชนีของผู้เข้าร่วมที่มี idCard ตรงกัน
     function getID(string memory _idCard) public view returns (Person memory) {
         
     }
