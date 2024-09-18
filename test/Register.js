@@ -43,16 +43,6 @@ describe("RegisterDisaster contract", function () {
             await expect(registerDisaster.getID(unregisteredID)).to.be.revertedWith("Person not found");
         });
 
-
-        /* it("Should get all people", async () => {
-            await registerDisaster.registerPerson("1234567890", "John", "Doe", "123 Main St");
-            await registerDisaster.registerPerson("1234567891", "Jane", "Doe", "456 Main St");
-            const allPeople = await registerDisaster.getPerson(0);
-            console.log(allPeople);
-            expect(allPeople.length).to.equal(2);
-            expect(allPeople[0].idCard).to.equal("1234567890");
-            expect(allPeople[1].idCard).to.equal("1234567891");
-        }); */
     });
 
     describe("Get Person", () => {
