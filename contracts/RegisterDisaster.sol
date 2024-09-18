@@ -31,6 +31,11 @@ contract RegisterDisaster {
         return people;
     }
 
+    function getPerson(uint256 index) public view returns (Person memory) {
+        require(index < people.length, "Person not found");
+        return people[index];
+    }
+
     function getID(string memory _idCard) public view returns (Person memory) {
         uint256 index = idToIndex[_idCard];
         require(index < people.length, "Person not found");
